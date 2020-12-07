@@ -1,8 +1,8 @@
-
+// import "../../public/static/imgs/basil-pieces.png"
 const PizzaPreview = () => {
     return(
-        <div>Pizza
-            <img></img>
+        <div className = "pizzaPreview">
+            <img className = "pizzaPreview__pizza" src = "/pizza.png"></img>
         </div>
     )
 }

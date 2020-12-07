@@ -1,7 +1,7 @@
 
 const GlobalHeader = () => {
     return(
-        <header> Build your own Pizza! </header>
+        <header className = "globalHeader"> Build your own Pizza! </header>
     )
 }
 

@@ -1,0 +1,13 @@
+.globalHeader{
+    font-family: 'Permanent Marker', cursive;
+    font-size: rem(24);
+    background-color: $burgundy;
+    text-align: center;
+    color: white;
+    padding-top:rem(20);
+    padding-bottom:rem(20);
+
+    @media only screen and ($tablet) {
+        font-size: rem(36);
+    }
+}

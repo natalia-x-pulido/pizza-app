@@ -1,12 +1,13 @@
 
 const StepMenu = () => {
     return(
-        <menu>
-            <li><a>1. Size</a></li>
-            <li><a>2. Sauce</a></li>
-            <li><a>3. Topppings</a></li>
-            <li><a>4. Verify</a></li>
-        </menu>
+        <nav className = "stepMenu">
+            <ul className= "stepMenu__list">
+                <li><a href = "#step1" className = "stepMenu__menuItem" >1. Size</a></li>
+                <li><a href = "#step2" className = "stepMenu__menuItem" >2. Toppings</a></li>
+                <li><a href = "#step3" className = "stepMenu__menuItem" >3. Verify</a></li>            </ul>
+            
+        </nav>
     )
 }
 
