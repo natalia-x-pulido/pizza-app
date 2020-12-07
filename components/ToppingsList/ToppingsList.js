@@ -2,19 +2,12 @@ const meatToppings = ["Chicken", "Pepperoni", "Ham", "Sausage"];
 const vegToppings = ["Bell Peppers", "Mushrooms", "Pineapple", "Tomato", "Basil"];
 
  function setToppingSelected (item, selectedTopping, setTopping ) {
-    console.log("The selected item is: ", item);
-    var newArr = selectedTopping
-    if(newArr.includes(item)){
-        // newArr.pop(item);
-        // console.log( "remove: ", selectedTopping.pop(item) )
+    if(selectedTopping.includes(item)){
         setTopping( selectedTopping.filter(items => items!=item) );
     }
     else{
-        // selectedTopping.concat(item);
-        // console.log( "concat", selectedTopping.concat(item) )
         setTopping( selectedTopping.concat(item) );
     }
-    
 }
 
 

@@ -1,28 +1,102 @@
 .pizzaPreview{
-    
+    &__wooden-board{
+        position: relative;
+        width:100%;
+        display: inline;
+
+        @media only screen and ($tablet) {
+            width: rem(290);
+            height: rem(290);
+        }
+    }
+
     &__pizza{
         width: 100%;
         height: auto;
-        
+        position: absolute;
+        &.small{
+            max-width: 30%;
+            top: 44%;
+            right: 33%;
+        }
+        &.medium{
+            max-width: 50%;
+            top: 34%;
+            right: 23%;
+        }
+
+        &.large{
+            max-width: 65%;
+            top: 27%;
+            left: 20%;
+        }
+
+        @media only screen and ($tablet) {
+            &.small{
+                width: rem(100);
+                height: rem(100);
+                top: rem(120);
+                left: rem(100);
+            }
+            &.medium{
+                width: rem(150);
+                height: rem(150);
+                top: rem(95);
+                right: rem(83);
+            }
     
+            &.large{
+                width: rem(200);
+                height: rem(200);
+                top: rem(70);
+                left: rem(50);
+            }
+        }
+        
     }
 
     &__container{
-        width: 100%;
-        height: auto;
         position: relative;
-        @media only screen and ($tablet) {
-            width: rem(250);
-            height: rem(250);
-            
-        }
+
+        // &.small{
+        //     max-width: rem(100);
+        //     max-height: rem(100);
+        // }
+
+        // &.medium{
+        //     max-width: rem(150);
+        //     max-height: rem(150);
+
+        // }
+
+        // &.large{
+        //     max-width: rem(200);
+        //     max-height: rem(200);
+           
+        // }
     }
     &__topping{
         position: absolute;
-        left: 50px;
-        top: 50px;
-        bottom: 0;
-        width: 152px;
-        height: 152px;
+
+        &.small{
+            left: 105px;
+            top: 135px;
+            width: 72px;
+            height: 72px;
+        }
+
+        &.medium{
+            left: 90px;
+            top: 115px;
+            width: 112px;
+            height: 112px;
+        }
+
+        &.large{
+            top: 95px;
+            right: -25px;
+            width: 152px;
+            height: 152px;
+        }
     }
 }
