@@ -1,19 +1,34 @@
+const meatToppings = ["Chicken", "Pepperoni", "Ham", "Sausage"];
+const vegToppings = ["Bell Peppers", "Mushrooms", "Pineapple", "Tomato", "Basil"];
 
-const ToppingsList = () => {
+ function setToppingSelected (item, handleToppingSelection ) {
+    console.log("The selected item is: ", item);
+    handleToppingSelection(item)
+}
+
+const ToppingsList = (handleToppingSelection) => {
     return(
-        <ul>
-            <h2> meats</h2>
-                <li>chicken</li>
-                <li> ham </li>
-                <li> pepperoni</li>
-                <li> sausage</li>
-            <h2> Vegetables</h2>
-                <li> bell peppers</li>
-                <li> mushrooms </li>
-                <li> pineapple</li>
-                <li> tomato</li>
-                <li> basil</li>
-        </ul>
+        <div>
+            <h2 className = "toppingsList__list-title"> Meats</h2>
+                {meatToppings.map((item, index) => (
+                    <div className = "toppingsList__list-item" key={`mt-${index}`}>
+                        <label className = "toppingsList__list-item-group">
+                            <input type="checkbox" name = "meatToppings" id={`meat-topping-${item}`} onClick = {() => setToppingSelected(item, handleToppingSelection)} />
+                            <div className = "toppingsList__list-item-label">{item}</div>
+                        </label>
+                    </div>
+                ))}
+                
+            <h2 className = "toppingsList__list-title"> Vegetables</h2>
+                {vegToppings.map((item, index) => (
+                    <div className = "toppingsList__list-item" key={`mt-${index}`}>
+                        <label className = "toppingsList__list-item-group">
+                            <input type="checkbox" name = {item} id={`veg-topping-${item}`}/>
+                            <div className = "toppingsList__list-item-label">{item}</div>
+                        </label>
+                    </div>
+                ))}
+        </div>  
     )
 }
 

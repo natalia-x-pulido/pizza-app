@@ -29,12 +29,53 @@
     }
 
     &__step-title{
-        font-size: rem(14);
+        font-size: rem(16);
         // light
         font-weight: 300;
+        // margin-top: rem(20);
 
         @media only screen and ($tablet) {
-            font-size: rem(21);
+            font-size: rem(24);
         }
     }
+
+    &__size-container{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: rem(40);
+    }
+
+    &__size-selector--size{
+        display: flex;
+        flex-direction: column;
+        padding-right: rem(10);
+    }
+
+    &__size-title{
+        margin-top: 0;
+        margin-bottom: rem(8);
+        font-weight: 300;
+        font-size: rem(12);
+        text-align: center;
+        @media only screen and ($tablet) {
+            font-size: rem(14);
+        }
+    }
+
+    &__size-small{
+        width: rem(42);
+        height: rem(42);
+    }
+
+    &__size-medium{
+        width: rem(65);
+        height: rem(65);
+    }
+
+    &__size-large{
+        width: rem(82);
+        height: rem(82);
+    }
+
 }

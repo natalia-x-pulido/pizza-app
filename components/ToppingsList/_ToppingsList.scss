@@ -1,0 +1,35 @@
+.toppingsList{
+    &__list-title{
+        font-size: rem(14);
+        // bold
+        font-weight: 700;
+        margin-top: rem(16);
+        @media only screen and ($tablet) {
+            font-size: rem(16);
+        }
+    }
+
+    &__list-item{
+        display: flex;
+        flex-direction: column;
+        font-size: rem(14);
+        // light
+        font-weight: 300;
+        list-style-type: none;
+
+        @media only screen and ($tablet) {
+            font-size: rem(16);
+        }
+    }
+
+    &__list-item-group{
+        // margin-left: 4px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__list-item-label{
+        margin-left: rem(4);
+        margin-bottom: rem(4);
+    }
+}
