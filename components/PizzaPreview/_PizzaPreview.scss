@@ -1,5 +1,5 @@
 .pizzaPreview{
-    &__wooden-board{
+    &__surface{
         position: relative;
         width:100%;
         display: inline;
@@ -8,12 +8,14 @@
             width: rem(290);
             height: rem(290);
         }
+        
     }
 
     &__pizza{
         width: 100%;
         height: auto;
         position: absolute;
+        
         &.small{
             max-width: 30%;
             top: 44%;
@@ -49,7 +51,62 @@
                 left: rem(55);
             }
         }
+
         
+    }
+
+    &__pizza-in-box{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        
+        &.small{
+            max-width: 40%;
+            top: 29%;
+            right: 30%;
+        }
+        &.medium{
+            max-width: 50%;
+            top: 24%;
+            right: 25%;
+        }
+
+        &.large{
+            max-width: 65%;
+            top: 18%;
+            left: 18%;
+        }
+
+        @media only screen and ($tablet) {
+            &.small{
+                width: rem(125);
+                top: rem(83);
+                left: rem(90);
+            }
+            &.medium{
+                width: rem(150);
+                top: rem(65);
+                right: rem(70);
+            }
+    
+            &.large{
+                width: rem(175);
+                top: rem(51);
+                left: rem(55);
+            
+            }
+        }
+    }
+
+    &__box{
+        // position: relative;
+        width:100%;
+        display: inline;
+
+        @media only screen and ($tablet) {
+            width: rem(290);
+            height: auto;
+        }
     }
 
     &__dough{
@@ -61,9 +118,9 @@
         left: 35%;
 
         @media only screen and ($tablet) {
-            width: 100px;
-            top: 130px;
-            left: 100px;
+            width: rem(100);
+            top: rem(130);
+            left: rem(100);
         }
     }
 
@@ -76,8 +133,8 @@
         left: 27%;
 
         @media only screen and ($tablet) {
-            top: 120px;
-            left: 70px;
+            top: rem(120);
+            left: rem(70);
         }
     }
 
@@ -113,15 +170,55 @@
                 left: rem(115);
             }
             &.medium{
-                width: 110px;
-                top: 120px;
-                left: 95px;
+                width: rem(110);
+                top: rem(120);
+                left: rem(95);
             }
     
             &.large{
                 top: rem(95);
                 left: rem(75);
                 width: rem(152);
+            }
+        }
+    }
+    &__topping-in-box{
+        position: absolute;
+
+        &.small{
+            left: 36%;
+            top: 33%;
+            width: 32%;
+        }
+
+        &.medium{
+            left: 31%;
+            top: 28%;
+            width: 40%;
+        }
+
+        &.large{
+            top: 24%;
+            left: 27%;
+            width: 51%;
+        }
+
+        @media only screen and ($tablet) {
+            &.small{
+                width: rem(95);
+                top: rem(91);
+                left: rem(104);
+            }
+            &.medium{
+                width: rem(120);
+                top: rem(75);
+                left: rem(91);
+            }
+    
+            &.large{
+                top: rem(61);
+                left: rem(74);
+                width: rem(145);
             }
         }
     }

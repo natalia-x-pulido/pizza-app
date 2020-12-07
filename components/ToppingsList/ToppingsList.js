@@ -13,7 +13,7 @@ const vegToppings = ["Bell Peppers", "Mushrooms", "Pineapple", "Tomato", "Basil"
 
 const ToppingsList = params => {
     return(
-        <div>
+        <div className = "toppingsList__container">
             <h2 className = {`toppingsList__list-title ${params.pizzaSize == "" ? "disabled" : ""}`}> Meats</h2>
                 {meatToppings.map((item, index) => (
                     <div className = "toppingsList__list-item" key={`mt-${index}`}>
