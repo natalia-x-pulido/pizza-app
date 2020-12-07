@@ -3,8 +3,10 @@ const PizzaPreview = params => {
     return(
         <div className = "pizzaPreview">
             
-            <div className = {`pizzaPreview__container ${params.pizzaSize}`}>
+            {params.isPizzaReady == false && <div className = {`pizzaPreview__container ${params.pizzaSize}`}>
                 <img className = "pizzaPreview__wooden-board" src = "/pizza-board.png"/>
+                {params.pizzaSize == "" && <img className = {`pizzaPreview__dough ${params.pizzaSize}`} src = "/dough.png"></img>}
+                {/* {params.pizzaSize == "" && <img className = {`pizzaPreview__dough-rolling ${params.pizzaSize}`} src = "/dough-to-pizza.png"></img>} */}
                 {params.pizzaSize != "" && <img className = {`pizzaPreview__pizza ${params.pizzaSize}`} src = "/pizza.png"></img>}
                 {params.selectedTopping.includes("Chicken") && <img className = {`pizzaPreview__topping ${params.pizzaSize}`} src = "/Chicken-pieces.png"></img>}
                 {params.selectedTopping.includes("Pepperoni") && <img className = {`pizzaPreview__topping ${params.pizzaSize}`} src = "/pepperoni-pieces.png"></img>}
@@ -16,7 +18,8 @@ const PizzaPreview = params => {
                 {params.selectedTopping.includes("Pineapple") && <img className = {`pizzaPreview__topping ${params.pizzaSize}`} src = "/pineapple-pieces.png"></img>}
                 {params.selectedTopping.includes("Tomato") && <img className = {`pizzaPreview__topping ${params.pizzaSize}`} src = "/tomato-pieces.png"></img>}
                 {params.selectedTopping.includes("Basil") && <img className = {`pizzaPreview__topping ${params.pizzaSize}`} src = "/basil-pieces.png"></img>}
-            </div>
+            </div>}
+            {params.isPizzaReady == true &&<img src="/pizza-box.png"></img>}
            
         </div>
     )

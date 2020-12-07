@@ -18,39 +18,33 @@
             max-width: 30%;
             top: 44%;
             right: 33%;
-            // height: auto;
         }
         &.medium{
             max-width: 50%;
             top: 34%;
             right: 23%;
-            // height: auto;
         }
 
         &.large{
             max-width: 65%;
             top: 27%;
             left: 20%;
-            // height: auto;
         }
 
         @media only screen and ($tablet) {
             &.small{
                 width: rem(100);
-                // height: rem(100);
                 top: rem(120);
                 left: rem(100);
             }
             &.medium{
                 width: rem(150);
-                // height: rem(150);
                 top: rem(95);
                 right: rem(83);
             }
     
             &.large{
                 width: rem(200);
-                // height: rem(200);
                 top: rem(70);
                 left: rem(50);
             }
@@ -58,8 +52,37 @@
         
     }
 
+    &__dough{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        max-width: 30%;
+        top: 45%;
+        left: 35%;
+
+        @media only screen and ($tablet) {
+            width: 100px;
+            top: 130px;
+            left: 100px;
+        }
+    }
+
+    &__dough-rolling{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        max-width: 60%;
+        top: 40%;
+        left: 27%;
+
+        @media only screen and ($tablet) {
+            top: 120px;
+            left: 70px;
+        }
+    }
+
     &__container{
-        position: relative;
+        position: fixed;
         
     }
     &__topping{
@@ -69,33 +92,28 @@
             left: 41%;
             top: 48%;
             width: 21%;
-            // height: auto;
         }
 
         &.medium{
             left: 34%;
             top: 42%;
             width: 35%;
-            // height: auto;
         }
 
         &.large{
             top: 34%;
             left: 28%;
             width: 50%;
-            // height:auto;
         }
 
         @media only screen and ($tablet) {
             &.small{
                 width: rem(70);
-                // height: auto;
                 top: rem(137);
                 left: rem(110);
             }
             &.medium{
                 width: 110px;
-                // height: auto;
                 top: 120px;
                 left: 95px;
             }
@@ -104,7 +122,6 @@
                 top: rem(95);
                 left: rem(75);
                 width: rem(152);
-                // height: auto;
             }
         }
     }

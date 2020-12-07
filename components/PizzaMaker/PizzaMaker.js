@@ -7,10 +7,14 @@ const PizzaMaker = () => {
 
     const [selectedTopping, setTopping] = useState([]);
     const [pizzaSize, setPizzaSize] = useState("");
+    var [isPizzaReady, setPizzaReady] = useState(false);
+
+
     return(
         <div className= "pizzaMaker">
             <div className = "pizzaMaker__steps">
-                <h1 className = "pizzaMaker__step-title" id="step1"> 1. Choose Your Size</h1>
+                {isPizzaReady != true && <div>
+                    <h1 className = "pizzaMaker__step-title" id="step1"> 1. Choose Your Size</h1>
                     <div className = "pizzaMaker__size-container">
                         <button className = "pizzaMaker__size-selector--size" onClick = {() => setPizzaSize("small")}>
                             <h4 className = "pizzaMaker__size-title">Small</h4> 
@@ -25,12 +29,17 @@ const PizzaMaker = () => {
                             <img className = "pizzaMaker__size-large" src = "/pizza.png"></img>
                         </button>
                     </div>
-                <h1 className = "pizzaMaker__step-title" id="step2"> 2. Choose Your Toppings</h1>
-                    <ToppingsList setTopping = {setTopping} selectedTopping = {selectedTopping} />
-                <h1 className = "pizzaMaker__step-title" id="step3"> 3. Verify your order</h1>
+                
+                    <h1 className = "pizzaMaker__step-title" id="step2"> 2. Choose Your Toppings</h1>
+                        <ToppingsList setTopping = {setTopping} selectedTopping = {selectedTopping} />
+                </div>}
+                <h1 className = "pizzaMaker__step-title" id="step3"> 3. Confirm your order</h1>
+                    {isPizzaReady != false && pizzaSize != "" && <div> You ordered a {pizzaSize} pizza with {selectedTopping.map( item => ( `${item}, `))}</div>}
+                    {isPizzaReady != true &&<button className = "pizzaMaker__make-pizza--button"onClick={() => setPizzaReady(true) }>Make my pizza </button>}
+                    {isPizzaReady != false && <button onClick={() => setPizzaReady(false) }> Edit pizza </button>}
             </div>
             <div className = "pizzaMaker__preview"> 
-                <PizzaPreview selectedTopping = {selectedTopping} pizzaSize = {pizzaSize}/>
+                <PizzaPreview selectedTopping = {selectedTopping} pizzaSize = {pizzaSize} isPizzaReady = {isPizzaReady}/>
             </div>
         </div>
     )

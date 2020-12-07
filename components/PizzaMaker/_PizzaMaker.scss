@@ -7,6 +7,9 @@
     max-width: rem(618);
     // justify-content: center;
 
+    &__make-pizza--button{
+        margin-bottom: 300px;
+    }
     @media only screen and ($tablet) {
         margin-left: auto;
         margin-right: auto;
