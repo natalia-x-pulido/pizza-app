@@ -10,9 +10,33 @@
     &__hide{
         display:none;
     }
+
     &__make-pizza--button{
-        margin-bottom: 300px;
+        margin-bottom: 170px;
+        margin-top: 50px;
+        padding: 20px;
+        color: white;
+        background-color: $green;
+        border:none;
+        border-radius: 80px;
+        font-size: 20px;
+
+        &.disabled{
+            background-color: lightgray;
+        }
     }
+
+    &__make-pizza--edit-button{
+        margin-bottom: 170px;
+        margin-top: 50px;
+        padding: 20px;
+        color: white;
+        background-color: $burgundy;
+        border:none;
+        border-radius: 80px;
+        font-size: 20px;
+    }
+
     @media only screen and ($tablet) {
         margin-left: auto;
         margin-right: auto;
@@ -43,6 +67,10 @@
         @media only screen and ($tablet) {
             font-size: rem(24);
         }
+
+        &.disabled{
+            color: lightGray;
+        }
     }
 
     &__size-container{
@@ -66,6 +94,8 @@
     &__size-title{
         margin-top: 0;
         margin-bottom: rem(8);
+        margin-right: auto;
+        margin-left: auto;
         font-weight: 300;
         font-size: rem(12);
         text-align: center;

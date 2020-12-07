@@ -30,13 +30,13 @@ const PizzaMaker = () => {
                         </button>
                     </div>
                 
-                    <h1 className = "pizzaMaker__step-title" id="step2"> 2. Choose Your Toppings</h1>
-                        <ToppingsList setTopping = {setTopping} selectedTopping = {selectedTopping} />
+                    <h1 className = {`pizzaMaker__step-title ${pizzaSize == "" ? "disabled" : ""}`} id="step2"> 2. Choose Your Toppings</h1>
+                        <ToppingsList setTopping = {setTopping} selectedTopping = {selectedTopping} pizzaSize = {pizzaSize} />
                 </div>
-                <h1 className = "pizzaMaker__step-title" id="step3"> 3. Confirm your order</h1>
-                    {isPizzaReady != false && pizzaSize != "" && <div> You ordered a {pizzaSize} pizza with {selectedTopping.map( item => ( `${item}, `))}</div>}
-                    {isPizzaReady != true &&<button className = "pizzaMaker__make-pizza--button"onClick={() => setPizzaReady(true) }>Make my pizza </button>}
-                    {isPizzaReady != false && <button onClick={() => setPizzaReady(false) }> Edit pizza </button>}
+                <h1 className = {`pizzaMaker__step-title ${pizzaSize == "" ? "disabled" : ""}`} id="step3"> 3. Confirm your order</h1>
+                    {isPizzaReady != false && pizzaSize != "" && <div> You ordered a {pizzaSize} pizza {`${selectedTopping.length >= 1 ? "with" : "with no toppings"}`} {selectedTopping.map( item => ( `${item}, `))}</div>}
+                    {isPizzaReady != true &&<button className = {`pizzaMaker__make-pizza--button ${pizzaSize == "" ? "disabled": ""}`} disabled = {`${pizzaSize == "" ? "true": ""}`} onClick={() => setPizzaReady(true) }>Make my pizza </button>}
+                    {isPizzaReady != false && <button className = "pizzaMaker__make-pizza--edit-button" onClick={() => setPizzaReady(false) }> Edit pizza </button>}
             </div>
             <div className = "pizzaMaker__preview"> 
                 <PizzaPreview selectedTopping = {selectedTopping} pizzaSize = {pizzaSize} isPizzaReady = {isPizzaReady}/>

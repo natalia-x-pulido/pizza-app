@@ -34,19 +34,19 @@
         @media only screen and ($tablet) {
             &.small{
                 width: rem(100);
-                top: rem(120);
-                left: rem(100);
+                top: rem(130);
+                left: rem(105);
             }
             &.medium{
                 width: rem(150);
-                top: rem(95);
-                right: rem(83);
+                top: rem(100);
+                right: rem(70);
             }
     
             &.large{
                 width: rem(200);
-                top: rem(70);
-                left: rem(50);
+                top: rem(80);
+                left: rem(55);
             }
         }
         
@@ -108,9 +108,9 @@
 
         @media only screen and ($tablet) {
             &.small{
-                width: rem(70);
-                top: rem(137);
-                left: rem(110);
+                width: rem(65);
+                top: rem(140);
+                left: rem(115);
             }
             &.medium{
                 width: 110px;
