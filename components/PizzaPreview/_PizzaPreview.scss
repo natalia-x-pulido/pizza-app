@@ -18,36 +18,39 @@
             max-width: 30%;
             top: 44%;
             right: 33%;
+            // height: auto;
         }
         &.medium{
             max-width: 50%;
             top: 34%;
             right: 23%;
+            // height: auto;
         }
 
         &.large{
             max-width: 65%;
             top: 27%;
             left: 20%;
+            // height: auto;
         }
 
         @media only screen and ($tablet) {
             &.small{
                 width: rem(100);
-                height: rem(100);
+                // height: rem(100);
                 top: rem(120);
                 left: rem(100);
             }
             &.medium{
                 width: rem(150);
-                height: rem(150);
+                // height: rem(150);
                 top: rem(95);
                 right: rem(83);
             }
     
             &.large{
                 width: rem(200);
-                height: rem(200);
+                // height: rem(200);
                 top: rem(70);
                 left: rem(50);
             }
@@ -57,46 +60,52 @@
 
     &__container{
         position: relative;
-
-        // &.small{
-        //     max-width: rem(100);
-        //     max-height: rem(100);
-        // }
-
-        // &.medium{
-        //     max-width: rem(150);
-        //     max-height: rem(150);
-
-        // }
-
-        // &.large{
-        //     max-width: rem(200);
-        //     max-height: rem(200);
-           
-        // }
+        
     }
     &__topping{
         position: absolute;
 
         &.small{
-            left: 105px;
-            top: 135px;
-            width: 72px;
-            height: 72px;
+            left: 41%;
+            top: 48%;
+            width: 21%;
+            // height: auto;
         }
 
         &.medium{
-            left: 90px;
-            top: 115px;
-            width: 112px;
-            height: 112px;
+            left: 34%;
+            top: 42%;
+            width: 35%;
+            // height: auto;
         }
 
         &.large{
-            top: 95px;
-            right: -25px;
-            width: 152px;
-            height: 152px;
+            top: 34%;
+            left: 28%;
+            width: 50%;
+            // height:auto;
+        }
+
+        @media only screen and ($tablet) {
+            &.small{
+                width: rem(70);
+                // height: auto;
+                top: rem(137);
+                left: rem(110);
+            }
+            &.medium{
+                width: 110px;
+                // height: auto;
+                top: 120px;
+                left: 95px;
+            }
+    
+            &.large{
+                top: rem(95);
+                left: rem(75);
+                width: rem(152);
+                // height: auto;
+            }
         }
     }
 }
