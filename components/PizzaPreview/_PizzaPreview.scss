@@ -4,11 +4,25 @@
         width: 100%;
         height: auto;
         
+    
+    }
+
+    &__container{
+        width: 100%;
+        height: auto;
+        position: relative;
         @media only screen and ($tablet) {
             width: rem(250);
             height: rem(250);
             
         }
-    
+    }
+    &__topping{
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        bottom: 0;
+        width: 152px;
+        height: 152px;
     }
 }
