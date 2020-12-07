@@ -13,7 +13,7 @@ const PizzaMaker = () => {
     return(
         <div className= "pizzaMaker">
             <div className = "pizzaMaker__steps">
-                {isPizzaReady != true && <div>
+                <div className = {`${isPizzaReady != false ? "pizzaMaker__hide" : ""}`}>
                     <h1 className = "pizzaMaker__step-title" id="step1"> 1. Choose Your Size</h1>
                     <div className = "pizzaMaker__size-container">
                         <button className = "pizzaMaker__size-selector--size" onClick = {() => setPizzaSize("small")}>
@@ -32,7 +32,7 @@ const PizzaMaker = () => {
                 
                     <h1 className = "pizzaMaker__step-title" id="step2"> 2. Choose Your Toppings</h1>
                         <ToppingsList setTopping = {setTopping} selectedTopping = {selectedTopping} />
-                </div>}
+                </div>
                 <h1 className = "pizzaMaker__step-title" id="step3"> 3. Confirm your order</h1>
                     {isPizzaReady != false && pizzaSize != "" && <div> You ordered a {pizzaSize} pizza with {selectedTopping.map( item => ( `${item}, `))}</div>}
                     {isPizzaReady != true &&<button className = "pizzaMaker__make-pizza--button"onClick={() => setPizzaReady(true) }>Make my pizza </button>}
