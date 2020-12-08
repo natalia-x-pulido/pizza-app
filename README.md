@@ -1,6 +1,6 @@
 ## Welcome to the Pizza Maker!
 
-This is an interactive web app where you can create your own pizza and see it being built in real-time. 
+This is an interactive web app where you can create your own pizza and see it being built in real-time. It is fully responsive so be sure to test out the different screen sizes!
 
 ## Getting Started
 
@@ -16,4 +16,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Technologies used 
 
-- NextJS 
+- NextJS 10.0.3

@@ -18,7 +18,7 @@ const PizzaMaker = () => {
                     <div className = "pizzaMaker__step-container">
                         <div className = "pizzaMaker__step-title--container">
                             <NumberedStep num= "1"  pizzaSize = "."/>
-                            <h1 className = "pizzaMaker__step-title" id="step1">Choose Your Size</h1>
+                            <h1 className = "pizzaMaker__step-title" >Choose Your Size</h1>
                         </div>
                         <div className = "pizzaMaker__size-container">
                             <button className = "pizzaMaker__size-selector--size" onClick = {() => setPizzaSize("small")}>
@@ -38,13 +38,13 @@ const PizzaMaker = () => {
                     <div className = "pizzaMaker__step-container">
                         <div className = "pizzaMaker__step-title--container">
                             <NumberedStep num= "2" pizzaSize = {pizzaSize}/>
-                            <h1 className = {`pizzaMaker__step-title ${pizzaSize == "" ? "disabled" : ""}`} id="step2">Choose Your Toppings</h1>
+                            <h1 className = {`pizzaMaker__step-title ${pizzaSize == "" ? "disabled" : ""}`}>Choose Your Toppings</h1>
                         </div>
                         <ToppingsList setTopping = {setTopping} selectedTopping = {selectedTopping} pizzaSize = {pizzaSize} />
                     </div>
                     <div className = "pizzaMaker__step-title--container">
                             <NumberedStep num= "3" pizzaSize = {pizzaSize}/>
-                            <h1 className = {`pizzaMaker__step-title ${pizzaSize == "" ? "disabled" : ""}`} id="step2">Confirm Your Order</h1>
+                            <h1 className = {`pizzaMaker__step-title ${pizzaSize == "" ? "disabled" : ""}`}>Confirm Your Order</h1>
                     </div>
                     {/* <h1 className = {`pizzaMaker__step-title ${pizzaSize == "" ? "disabled" : ""}`} id="step3"> 3. Confirm your order</h1> */}
                 </div>
