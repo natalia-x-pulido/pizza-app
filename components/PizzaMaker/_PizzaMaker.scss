@@ -41,10 +41,16 @@
     }
 
     &__step-title{
-        font-size: rem(16);
+        margin-left: 12px;
+        font-size: rem(14);
         // light
         font-weight: 300;
         // margin-top: rem(20);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+        margin-bottom: 0;
 
         @media only screen and ($tablet) {
             font-size: rem(24);
@@ -99,6 +105,9 @@
     &__size-large{
         width: rem(82);
         height: rem(82);
+    }
+    &__step-title--container{
+        display: flex;
     }
 
     &__make-pizza--button{

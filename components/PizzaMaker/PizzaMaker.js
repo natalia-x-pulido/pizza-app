@@ -1,5 +1,6 @@
 import PizzaPreview from "../PizzaPreview";
 import ToppingsList from "../ToppingsList";
+import NumberedStep from "../NumberedStep";
 import React, {useState} from "react";
 
 
@@ -15,7 +16,11 @@ const PizzaMaker = () => {
             <div className = "pizzaMaker__steps">
                 <div className = {`${isPizzaReady != false ? "pizzaMaker__hide" : ""}`}>
                     <div className = "pizzaMaker__step-container">
-                        <h1 className = "pizzaMaker__step-title" id="step1"> 1. Choose Your Size</h1>
+                        <div className = "pizzaMaker__step-title--container">
+                            <NumberedStep num= "1"/>
+                            <h1 className = "pizzaMaker__step-title" id="step1"> Choose Your Size</h1>
+                        </div>
+                        
                         <div className = "pizzaMaker__size-container">
                             <button className = "pizzaMaker__size-selector--size" onClick = {() => setPizzaSize("small")}>
                                 <h4 className = "pizzaMaker__size-title">Small</h4> 
