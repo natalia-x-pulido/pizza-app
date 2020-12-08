@@ -1,6 +1,6 @@
 .toppingsList{
     &__container{
-        margin-left: rem(20);
+        margin-left: rem(40);
     }
     
     &__list-title{
@@ -8,6 +8,7 @@
         // bold
         font-weight: 700;
         margin-top: rem(16);
+        transition: color 1s ease-out;
 
         @media only screen and ($tablet) {
             font-size: rem(16);
@@ -39,7 +40,7 @@
     &__list-item-label{
         margin-left: rem(4);
         margin-bottom: rem(4);
-
+        transition: color 1s ease-out;
         &.disabled{
             color: lightGray;
         }

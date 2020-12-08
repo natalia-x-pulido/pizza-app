@@ -2,11 +2,9 @@
     &__container{
         border-radius: rem(18.5);
         background-color: $brown;
-        // height: rem(42);
-
-        @media only screen and ($tablet) {
-            // font-size: rem(18);
-            // height: rem(42);
+        transition: background-color 1s ease-out;
+        &.disabled{
+            background-color: lightgray;
         }
     }
 

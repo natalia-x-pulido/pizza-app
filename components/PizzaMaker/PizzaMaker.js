@@ -17,10 +17,9 @@ const PizzaMaker = () => {
                 <div className = {`${isPizzaReady != false ? "pizzaMaker__hide" : ""}`}>
                     <div className = "pizzaMaker__step-container">
                         <div className = "pizzaMaker__step-title--container">
-                            <NumberedStep num= "1"/>
-                            <h1 className = "pizzaMaker__step-title" id="step1"> Choose Your Size</h1>
+                            <NumberedStep num= "1"  pizzaSize = "."/>
+                            <h1 className = "pizzaMaker__step-title" id="step1">Choose Your Size</h1>
                         </div>
-                        
                         <div className = "pizzaMaker__size-container">
                             <button className = "pizzaMaker__size-selector--size" onClick = {() => setPizzaSize("small")}>
                                 <h4 className = "pizzaMaker__size-title">Small</h4> 
@@ -37,12 +36,19 @@ const PizzaMaker = () => {
                         </div>
                     </div>
                     <div className = "pizzaMaker__step-container">
-                        <h1 className = {`pizzaMaker__step-title ${pizzaSize == "" ? "disabled" : ""}`} id="step2"> 2. Choose Your Toppings</h1>
+                        <div className = "pizzaMaker__step-title--container">
+                            <NumberedStep num= "2" pizzaSize = {pizzaSize}/>
+                            <h1 className = {`pizzaMaker__step-title ${pizzaSize == "" ? "disabled" : ""}`} id="step2">Choose Your Toppings</h1>
+                        </div>
                         <ToppingsList setTopping = {setTopping} selectedTopping = {selectedTopping} pizzaSize = {pizzaSize} />
                     </div>
-                    <h1 className = {`pizzaMaker__step-title ${pizzaSize == "" ? "disabled" : ""}`} id="step3"> 3. Confirm your order</h1>
+                    <div className = "pizzaMaker__step-title--container">
+                            <NumberedStep num= "3" pizzaSize = {pizzaSize}/>
+                            <h1 className = {`pizzaMaker__step-title ${pizzaSize == "" ? "disabled" : ""}`} id="step2">Confirm Your Order</h1>
+                    </div>
+                    {/* <h1 className = {`pizzaMaker__step-title ${pizzaSize == "" ? "disabled" : ""}`} id="step3"> 3. Confirm your order</h1> */}
                 </div>
-                    {isPizzaReady != false && pizzaSize != "" && <p className = "pizzaMaker__your_order"> You ordered a {pizzaSize} pizza {`${selectedTopping.length >= 1 ? "with" : "with no toppings"}`} {selectedTopping.map( item => ( `${item}, `))}</p>}
+                    {isPizzaReady != false && pizzaSize != "" && <p className = "pizzaMaker__your_order"> You ordered a {pizzaSize} pizza {`${selectedTopping.length >= 1 ? "with" : "with no toppings"}`} {selectedTopping.map( (item,index) => ( `${index == (selectedTopping.length-1) ? "& " : ", " } ${item } `))}</p>}
                     {isPizzaReady != false && pizzaSize != "" && <p className = "pizzaMaker__next_steps"> You're order is set! If you'd like to make any changes, select the button below. Otherwise, enjoy!</p>}
                     {isPizzaReady != true &&<button className = {`pizzaMaker__make-pizza--button ${pizzaSize == "" ? "disabled": ""}`} disabled = {`${pizzaSize == "" ? "true": ""}`} onClick={() => setPizzaReady(true) }>Make my pizza </button>}
                     {isPizzaReady != false && <button className = "pizzaMaker__make-pizza--edit-button" onClick={() => setPizzaReady(false) }> Edit pizza </button>}

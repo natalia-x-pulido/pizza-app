@@ -51,6 +51,7 @@
         justify-content: center;
         margin-top: 0;
         margin-bottom: 0;
+        transition: color 0.5s ease-out;
 
         @media only screen and ($tablet) {
             font-size: rem(24);
@@ -66,6 +67,7 @@
         flex-direction: column;
         justify-content: space-between;
         margin-right: rem(40);
+        margin-left: rem(40);
     }
 
     &__size-selector--size{
@@ -108,6 +110,7 @@
     }
     &__step-title--container{
         display: flex;
+        margin-bottom: rem(20);
     }
 
     &__make-pizza--button{
@@ -118,14 +121,23 @@
         border:none;
         border-radius: rem(80);
         font-size: rem(14);
+        margin-left: rem(40);
+        transition-duration: 0.4s;
 
         @media only screen and ($tablet){
             margin-top: rem(30);
             font-size: rem(16);
-            margin-left: rem(20);
+            // margin-left: rem(20);
         }
         &.disabled{
             background-color: lightgray;
+        }
+
+        &:hover{
+            background-color: white;
+            color: $green;
+            border: 1px solid $green;
+
         }
     }
 
