@@ -2,10 +2,16 @@
     &__container{
         border-radius: rem(18.5);
         background-color: $brown;
+        max-height: 26px;
         transition: background-color 1s ease-out;
+        
         &.disabled{
             background-color: lightgray;
         }
+        @media only screen and ($tablet) {
+            max-height: rem(36)
+        }
+
     }
 
     &__number{

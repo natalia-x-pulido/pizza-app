@@ -18,7 +18,7 @@ const ToppingsList = params => {
                 {meatToppings.map((item, index) => (
                     <div className = "toppingsList__list-item" key={`mt-${index}`}>
                         <label className = "toppingsList__list-item-group">
-                            <input type="checkbox" name = "meatToppings" id={`meat-topping-${item}`} disabled = {`${params.pizzaSize == "" ? "disabled" : ""}`} onClick = {() => setToppingSelected(item, params.selectedTopping, params.setTopping)}  />
+                            <input type="checkbox" className = "toppingsList--checkbox"id={`meat-topping-${item}`} disabled = {`${params.pizzaSize == "" ? "disabled" : ""}`} onClick = {() => setToppingSelected(item, params.selectedTopping, params.setTopping)}  />
                             <div className = {`toppingsList__list-item-label ${params.pizzaSize == "" ? "disabled" : ""}`}>{item}</div>
                         </label>
                     </div>
@@ -28,7 +28,7 @@ const ToppingsList = params => {
                 {vegToppings.map((item, index) => (
                     <div className = "toppingsList__list-item" key={`mt-${index}`}>
                         <label className = "toppingsList__list-item-group" >
-                            <input type="checkbox" name = {item} id={`veg-topping-${item}`} disabled = {`${params.pizzaSize == "" ? "disabled" : ""}`} onClick = {() => setToppingSelected(item, params.selectedTopping, params.setTopping)} />
+                            <input type="checkbox" className = "toppingsList--checkbox" id={`veg-topping-${item}`} disabled = {`${params.pizzaSize == "" ? "disabled" : ""}`} onClick = {() => setToppingSelected(item, params.selectedTopping, params.setTopping)} />
                             <div className = {`toppingsList__list-item-label ${params.pizzaSize == "" ? "disabled" : ""}`} >{item}</div>
                         </label>
                     </div>

@@ -46,4 +46,33 @@
         }
     }
 
+    &--checkbox{
+        -webkit-appearance: none;
+        background-color: #fafafa;
+        border: rem(1) solid #cacece;
+        padding: rem(9);
+        border-radius: rem(3);
+        display: inline-block;
+        position: relative;
+        margin-bottom: rem(10);
+    
+        &:active, &:checked:active{
+            outline: none;
+        }
+
+        &:checked{
+            border: rem(1) solid #adb8c0;
+            outline: none;
+	        color: #99a1a7;
+        }
+
+        &:checked:after{
+            content: '\2714';
+            position: absolute;
+            top: 0;
+            left: rem(3);
+            color: $burgundy;
+        }
+    }
+
 }
