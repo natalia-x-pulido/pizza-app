@@ -2,6 +2,8 @@
 
 This is an interactive web app where you can create your own pizza and see it being built in real-time. It is fully responsive so be sure to test out the different screen sizes!
 
+demo: https://pizza-app-2.vercel.app/
+
 ## Getting Started
 
 First, run the development server:
