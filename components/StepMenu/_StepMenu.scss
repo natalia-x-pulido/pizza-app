@@ -1,0 +1,32 @@
+.stepMenu {
+    display: flex;
+    justify-content: center;
+
+    &__list{
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        list-style-type: none;
+        font-size: rem(14);
+        padding:0;
+
+        @media only screen and ($tablet) {
+            font-size: rem(18);
+        }
+
+        li{
+            border-right: 1px solid $brown;
+        }
+    
+        li:last-child{
+            border-right: none;
+        }
+    }
+    
+    &__menuItem{ 
+        margin-right: 8px;
+        margin-left: 8px;
+        text-decoration: none;
+        color: inherit;
+    }
+}

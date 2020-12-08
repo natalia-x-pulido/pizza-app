@@ -1,0 +1,17 @@
+@import "./base/base";
+@import "../components/components";
+
+
+.intro-slogan{
+    text-align: center;
+    margin-top: rem(50);
+    margin-bottom: rem(50);
+    font-family: "Roboto", sans-serif;
+    font-size: rem(20);
+    margin-left: 10px;
+    margin-right: 10px;
+
+    @media only screen and ($tablet) {
+        margin-bottom: rem(100);
+    }
+}

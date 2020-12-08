@@ -5,11 +5,12 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Build Your Pizza!</title>
+        <title>Pizza Builder!</title>
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <GlobalHeader/>
-      <StepMenu/>
+      <h1 className= "intro-slogan">Create your pizza in 3 simple steps! </h1>
+      {/* <StepMenu/> */}
       <PizzaMaker/>
     </div>
   )

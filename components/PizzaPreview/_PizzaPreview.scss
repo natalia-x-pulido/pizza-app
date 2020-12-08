@@ -1,0 +1,261 @@
+.pizzaPreview{
+
+    // items
+    &__surface{
+        position: relative;
+        width:100%;
+        display: inline;
+        max-width: rem(290);
+
+        @media only screen and ($tablet) {
+            width: rem(290);
+            height: rem(290);
+        }
+        
+    }
+
+    &__pizza{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        transition-duration: 0.4s;
+
+        &.small{
+            max-width: 30%;
+            top: 44%;
+            right: 33%;
+        }
+        &.medium{
+            max-width: 50%;
+            top: 34%;
+            right: 23%;
+        }
+
+        &.large{
+            max-width: 65%;
+            top: 27%;
+            right: 15%;
+        }
+
+        @media only screen and ($tablet) {
+            &.small{
+                width: rem(100);
+                top: rem(130);
+                right: rem(99);
+            }
+            &.medium{
+                width: rem(150);
+                top: rem(100);
+                right: rem(70);
+            }
+    
+            &.large{
+                width: rem(200);
+                top: rem(80);
+                right: rem(43);
+            }
+        }
+        
+    }
+
+    &__pizza-in-box{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        transition-duration: 0.4s;
+        
+        &.small{
+            max-width: 40%;
+            top: 29%;
+            right: 30%;
+        }
+        &.medium{
+            max-width: 50%;
+            top: 24%;
+            right: 25%;
+        }
+
+        &.large{
+            max-width: 65%;
+            top: 18%;
+            right: 18%;
+        }
+
+        @media only screen and ($tablet) {
+            &.small{
+                width: rem(125);
+                top: rem(83);
+                right: rem(85);
+            }
+            &.medium{
+                width: rem(150);
+                top: rem(65);
+                right: rem(70);
+            }
+    
+            &.large{
+                width: rem(175);
+                top: rem(51);
+                right: rem(55);
+            
+            }
+        }
+    }
+
+    &__box{
+        width:100%;
+        display: inline;
+        max-width: rem(290);
+        transition-duration: 0.4s;
+
+        @media only screen and ($tablet) {
+            width: rem(290);
+            height: auto;
+        }
+    }
+
+    &__dough{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        max-width: 30%;
+        top: 45%;
+        right: 35%;
+
+        @media only screen and ($tablet) {
+            width: rem(100);
+            top: rem(130);
+            right: rem(100);
+        }
+    }
+
+    &__container{
+        position: fixed;
+        
+    }
+    &__topping{
+        position: absolute;
+        transition-duration: 0.4s;
+
+        &.small{
+            right: 38%;
+            top: 48%;
+            width: 21%;
+        }
+
+        &.medium{
+            right: 30%;
+            top: 42%;
+            width: 35%;
+        }
+
+        &.large{
+            top: 34%;
+            right: 22%;
+            width: 50%;
+        }
+
+        @media only screen and ($tablet) {
+            &.small{
+                width: rem(65);
+                top: rem(140);
+                right: rem(110);
+            }
+            &.medium{
+                width: rem(110);
+                top: rem(120);
+                right: rem(87);
+            }
+    
+            &.large{
+                top: rem(95);
+                right: rem(61);
+                width: rem(152);
+            }
+        }
+    }
+    &__topping-in-box{
+        position: absolute;
+        transition-duration: 0.4s;
+
+        &.small{
+            right: 34%;
+            top: 32%;
+            width: 32%;
+        }
+
+        &.medium{
+            right: 30%;
+            top: 28%;
+            width: 40%;
+        }
+
+        &.large{
+            top: 24%;
+            right: 25%;
+            width: 51%;
+        }
+
+        @media only screen and ($tablet) {
+            &.small{
+                width: rem(95);
+                top: rem(91);
+                right: rem(96);
+            }
+            &.medium{
+                width: rem(120);
+                top: rem(75);
+                right: rem(83);
+            }
+    
+            &.large{
+                top: rem(66);
+                right: rem(73);
+                width: rem(142);
+            }
+        }
+    }
+}
+
+
+    // animation
+.fade-in {
+    animation: fadeIn ease 0.4s;
+    -webkit-animation: fadeIn ease 0.4s;
+    }
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+    
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+    
+.scale-up{
+    animation: scale-up ease 0.4s;
+    -webkit-animation: scale-up ease 0.4s;
+}
+@keyframes scale-up {
+    0% {
+        transform: scale(0.5);
+        opacity:0;
+    }
+    100% {
+        transform: scale(1);
+        opacity:1;
+    }
+}
+    
+@-webkit-keyframes scale-up {
+    0% {
+        transform: scale(0.5);
+        opacity:0;
+    }
+    100% {
+        transform: scale(1);
+        opacity:1;
+    }
+}

@@ -1,0 +1,30 @@
+.numberedStep{
+    &__container{
+        border-radius: rem(18.5);
+        background-color: $brown;
+        max-height: 26px;
+        transition: background-color 1s ease-out;
+        
+        &.disabled{
+            background-color: lightgray;
+        }
+        @media only screen and ($tablet) {
+            max-height: rem(36)
+        }
+
+    }
+
+    &__number{
+        color: white;
+        font-size: rem(16);
+        font-family: "Roboto", sans-serif;
+        padding: rem(4) rem(8);
+        font-weight: 700;
+        text-align: center;
+        margin:0;
+
+        @media only screen and ($tablet) {
+            font-size: rem(24);
+        }
+    }
+}
